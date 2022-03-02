@@ -1,0 +1,530 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe70aba2e7074048aca5de573b64a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SimpleSelectedItems:
+    m_Keys:
+    - .collabignore
+    - Assets/Animation.meta
+    - Assets/Animation/Enemy Virus Anim.meta
+    - Assets/Animation/Enemy Virus Anim/IDLE.meta
+    - Assets/Animation/Enemy Virus Anim/IDLE/IDLE.anim
+    - Assets/Animation/Enemy Virus Anim/IDLE/IDLE.anim.meta
+    - Assets/Animation/Enemy Virus Anim/Virus IDLE.anim
+    - Assets/Animation/Enemy Virus Anim/Virus IDLE.anim.meta
+    - Assets/Animation/Enemy Virus Anim/VirusAnim.controller
+    - Assets/Animation/Enemy Virus Anim/VirusAnim.controller.meta
+    - Assets/Animation/FloatingText.anim
+    - Assets/Animation/FloatingText.anim.meta
+    - Assets/Animation/PlayerAnim.meta
+    - Assets/Animation/PlayerAnim/Jumping.anim
+    - Assets/Animation/PlayerAnim/Jumping.anim.meta
+    - Assets/Animation/PlayerAnim/Walking.meta
+    - Assets/Animation/PlayerAnim/Walking/Attacking.anim
+    - Assets/Animation/PlayerAnim/Walking/Attacking.anim.meta
+    - Assets/Animation/PlayerAnim/Walking/Idle.anim
+    - Assets/Animation/PlayerAnim/Walking/Idle.anim.meta
+    - Assets/Animation/PlayerAnim/Walking/PlayerAnim.controller
+    - Assets/Animation/PlayerAnim/Walking/PlayerAnim.controller.meta
+    - Assets/Animation/PlayerAnim/Walking/Walking.anim
+    - Assets/Animation/PlayerAnim/Walking/Walking.anim.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-00.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-00.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-01.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-01.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-02.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-02.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-03.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-03.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-04.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-04.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-05.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-attack2-05.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-00.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-00.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-01.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-01.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-02.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-02.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-03.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-idle-2-03.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-00.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-00.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-01.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-01.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-02.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-02.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-03.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-03.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-04.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-04.png.meta
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-05.png
+    - Assets/Animation/PlayerAnim/Walking/adventurer-run-05.png.meta
+    - Assets/Animation/PlayerAnim/adventurer-crnr-jmp-00.png
+    - Assets/Animation/PlayerAnim/adventurer-crnr-jmp-00.png.meta
+    - Assets/Animation/PlayerAnim/adventurer-crnr-jmp-01.png
+    - Assets/Animation/PlayerAnim/adventurer-crnr-jmp-01.png.meta
+    - Assets/Animation/PlayerAnim/adventurer-crnr-jmp-02.png
+    - Assets/Animation/PlayerAnim/adventurer-crnr-jmp-02.png.meta
+    - Assets/Animation/PowerUpText.controller
+    - Assets/Animation/PowerUpText.controller.meta
+    - Assets/Animation/Test.meta
+    - Assets/Animation/Test/1.controller
+    - Assets/Animation/Test/1.controller.meta
+    - Assets/Animation/Test/1.png
+    - Assets/Animation/Test/1.png.meta
+    - Assets/Animation/Test/2.png
+    - Assets/Animation/Test/2.png.meta
+    - Assets/Animation/Test/3.png
+    - Assets/Animation/Test/3.png.meta
+    - Assets/Animation/Test/4.png
+    - Assets/Animation/Test/4.png.meta
+    - Assets/Animation/Test/5.png
+    - Assets/Animation/Test/5.png.meta
+    - Assets/Animation/Test/6.png
+    - Assets/Animation/Test/6.png.meta
+    - Assets/Animation/Test/7.png
+    - Assets/Animation/Test/7.png.meta
+    - Assets/Animation/Test/8.png
+    - Assets/Animation/Test/8.png.meta
+    - Assets/Animation/Test/Idle.anim
+    - Assets/Animation/Test/Idle.anim.meta
+    - Assets/Animation/Vitamins.controller
+    - Assets/Animation/Vitamins.controller.meta
+    - Assets/Animation/VitaminsAnim.anim
+    - Assets/Animation/VitaminsAnim.anim.meta
+    - Assets/Audio.meta
+    - Assets/Audio/( WAV )Introduction_Voice_Over_1.wav
+    - Assets/Audio/( WAV )Introduction_Voice_Over_1.wav.meta
+    - Assets/Audio/EnemyAttack.wav
+    - Assets/Audio/EnemyAttack.wav.meta
+    - Assets/Audio/EnemyChase.mp3
+    - Assets/Audio/EnemyChase.mp3.meta
+    - Assets/Audio/EnemyDamage.wav
+    - Assets/Audio/EnemyDamage.wav.meta
+    - Assets/Audio/EnemyDeath.mp3
+    - Assets/Audio/EnemyDeath.mp3.meta
+    - Assets/Audio/Introduction_Voice_Over_2.wav
+    - Assets/Audio/Introduction_Voice_Over_2.wav.meta
+    - Assets/Audio/Introduction_Voice_Over_3.wav
+    - Assets/Audio/Introduction_Voice_Over_3.wav.meta
+    - Assets/Audio/LevelClear2.wav
+    - Assets/Audio/LevelClear2.wav.meta
+    - Assets/Audio/MainMenu_and_Map.mp3
+    - Assets/Audio/MainMenu_and_Map.mp3.meta
+    - Assets/Audio/PlayerAtk.flac
+    - Assets/Audio/PlayerAtk.flac.meta
+    - Assets/Audio/PlayerHIt.mp3
+    - Assets/Audio/PlayerHIt.mp3.meta
+    - Assets/Audio/PlayerJumpNew.wav
+    - Assets/Audio/PlayerJumpNew.wav.meta
+    - Assets/Covid19.jpg
+    - Assets/Covid19.jpg.meta
+    - Assets/Fonts.meta
+    - Assets/Fonts/Blockstepped 3D.ttf
+    - Assets/Fonts/Blockstepped 3D.ttf.meta
+    - Assets/Fonts/Blockstepped.ttf
+    - Assets/Fonts/Blockstepped.ttf.meta
+    - Assets/Fonts/CecepsHandwriting-vmpKZ.ttf
+    - Assets/Fonts/CecepsHandwriting-vmpKZ.ttf.meta
+    - Assets/Fonts/YourQuotaRegular-z2zl.ttf
+    - Assets/Fonts/YourQuotaRegular-z2zl.ttf.meta
+    - Assets/Material.mat
+    - Assets/Material.mat.meta
+    - Assets/PhysicsMaterial.meta
+    - Assets/PhysicsMaterial/New Physics Material 2D.physicsMaterial2D
+    - Assets/PhysicsMaterial/New Physics Material 2D.physicsMaterial2D.meta
+    - Assets/Prefab.meta
+    - Assets/Prefab/Enemy.meta
+    - Assets/Prefab/Enemy/EnemyVirus.prefab
+    - Assets/Prefab/Enemy/EnemyVirus.prefab.meta
+    - Assets/Prefab/LevelButton.meta
+    - Assets/Prefab/LevelButton/EncyclopediaHandler.prefab
+    - Assets/Prefab/LevelButton/EncyclopediaHandler.prefab.meta
+    - Assets/Prefab/LevelButton/Level.prefab
+    - Assets/Prefab/LevelButton/Level.prefab.meta
+    - Assets/Prefab/LevelButton/MenuHandler.prefab
+    - Assets/Prefab/LevelButton/MenuHandler.prefab.meta
+    - Assets/Prefab/Player.meta
+    - Assets/Prefab/Player/Player.prefab
+    - Assets/Prefab/Player/Player.prefab.meta
+    - Assets/Prefab/Power-Ups.meta
+    - Assets/Prefab/Power-Ups/VitaminsC.prefab
+    - Assets/Prefab/Power-Ups/VitaminsC.prefab.meta
+    - Assets/Prefab/Power-Ups/VitaminsD.prefab
+    - Assets/Prefab/Power-Ups/VitaminsD.prefab.meta
+    - Assets/Prefab/Power-Ups/VitaminsE.prefab
+    - Assets/Prefab/Power-Ups/VitaminsE.prefab.meta
+    - Assets/Prefab/Power-Ups/Zinc.prefab
+    - Assets/Prefab/Power-Ups/Zinc.prefab.meta
+    - Assets/Prefab/SystemPrefab.meta
+    - Assets/Prefab/SystemPrefab/Game_Manager.prefab
+    - Assets/Prefab/SystemPrefab/Game_Manager.prefab.meta
+    - Assets/Scenes.meta
+    - Assets/Scenes/CanvasTimeline.playable
+    - Assets/Scenes/CanvasTimeline.playable.meta
+    - Assets/Scenes/IntroCenimatic.unity
+    - Assets/Scenes/IntroCenimatic.unity.meta
+    - Assets/Scenes/Level1.unity
+    - Assets/Scenes/Level1.unity.meta
+    - Assets/Scenes/Level2.unity
+    - Assets/Scenes/Level2.unity.meta
+    - Assets/Scenes/LoadinForeground.png
+    - Assets/Scenes/LoadinForeground.png.meta
+    - Assets/Scenes/MainMenu.unity
+    - Assets/Scenes/MainMenu.unity.meta
+    - Assets/Scenes/MapScene.unity
+    - Assets/Scenes/MapScene.unity.meta
+    - Assets/Script.meta
+    - Assets/Script/Encyclopedia Sytem.meta
+    - Assets/Script/Encyclopedia Sytem/Covid19.png
+    - Assets/Script/Encyclopedia Sytem/Covid19.png.meta
+    - Assets/Script/Encyclopedia Sytem/DengueV.jpg
+    - Assets/Script/Encyclopedia Sytem/DengueV.jpg.meta
+    - Assets/Script/Encyclopedia Sytem/Identifier.cs
+    - Assets/Script/Encyclopedia Sytem/Identifier.cs.meta
+    - Assets/Script/Encyclopedia Sytem/ImmuneBooster.cs
+    - Assets/Script/Encyclopedia Sytem/ImmuneBooster.cs.meta
+    - Assets/Script/Encyclopedia Sytem/ImmuneCells_Data.cs
+    - Assets/Script/Encyclopedia Sytem/ImmuneCells_Data.cs.meta
+    - Assets/Script/Encyclopedia Sytem/InfluenzaVirus.jpg
+    - Assets/Script/Encyclopedia Sytem/InfluenzaVirus.jpg.meta
+    - Assets/Script/Encyclopedia Sytem/VirusData.cs
+    - Assets/Script/Encyclopedia Sytem/VirusData.cs.meta
+    - Assets/Script/Encyclopedia Sytem/VitaminC.png
+    - Assets/Script/Encyclopedia Sytem/VitaminC.png.meta
+    - Assets/Script/Encyclopedia Sytem/WBC.jpg
+    - Assets/Script/Encyclopedia Sytem/WBC.jpg.meta
+    - Assets/Script/Encyclopedia Sytem/rhinoviruses.jpg
+    - Assets/Script/Encyclopedia Sytem/rhinoviruses.jpg.meta
+    - Assets/Script/Encyclopedia Sytem/rsv.jpg
+    - Assets/Script/Encyclopedia Sytem/rsv.jpg.meta
+    - Assets/Script/EnemyManager.meta
+    - Assets/Script/EnemyManager/EnemyManger.cs
+    - Assets/Script/EnemyManager/EnemyManger.cs.meta
+    - Assets/Script/EnemyScript.meta
+    - Assets/Script/EnemyScript/Covid.cs
+    - Assets/Script/EnemyScript/Covid.cs.meta
+    - Assets/Script/EnemyScript/EnemySystem.cs
+    - Assets/Script/EnemyScript/EnemySystem.cs.meta
+    - Assets/Script/EnemyScript/Idamagable.cs
+    - Assets/Script/EnemyScript/Idamagable.cs.meta
+    - Assets/Script/IntroStory.cs
+    - Assets/Script/IntroStory.cs.meta
+    - Assets/Script/LevelSelection.meta
+    - Assets/Script/LevelSelection/LevelSelectorScript.cs
+    - Assets/Script/LevelSelection/LevelSelectorScript.cs.meta
+    - Assets/Script/LevelSelection/ScreenLoader.cs
+    - Assets/Script/LevelSelection/ScreenLoader.cs.meta
+    - Assets/Script/PlayerScript.meta
+    - Assets/Script/PlayerScript/PlayerSystem.cs
+    - Assets/Script/PlayerScript/PlayerSystem.cs.meta
+    - Assets/Script/PowerUp.meta
+    - Assets/Script/PowerUp/PowerUps.cs
+    - Assets/Script/PowerUp/PowerUps.cs.meta
+    - Assets/Script/System Manager.meta
+    - Assets/Script/System Manager/AudioAssets.cs
+    - Assets/Script/System Manager/AudioAssets.cs.meta
+    - Assets/Script/System Manager/GameManagerSystem.cs
+    - Assets/Script/System Manager/GameManagerSystem.cs.meta
+    - Assets/Script/System Manager/LevelManager.cs
+    - Assets/Script/System Manager/LevelManager.cs.meta
+    - Assets/Sprites.meta
+    - Assets/Sprites/6.png
+    - Assets/Sprites/6.png.meta
+    - Assets/Sprites/Enemy Virus Sprite.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/1.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/1.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/10.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/10.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/11.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/11.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/12.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/12.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/13.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/13.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/2.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/2.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/3.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/3.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/4.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/4.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/5.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/5.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/6.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/6.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/7.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/7.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/8.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/8.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/9.png
+    - Assets/Sprites/Enemy Virus Sprite/IDLE/9.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Attack.anim
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Attack.anim.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Idle.anim
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Idle.anim.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton Attack.png
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton Attack.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton Idle.png
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton Idle.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton Walk.png
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton Walk.png.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton.controller
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Skeleton.controller.meta
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Walking.anim
+    - Assets/Sprites/Enemy Virus Sprite/TestSprite/Walking.anim.meta
+    - Assets/Sprites/Player Sprites.meta
+    - Assets/Sprites/Player Sprites/Attack.meta
+    - Assets/Sprites/Player Sprites/Attack/PlayerAttack.anim
+    - Assets/Sprites/Player Sprites/Attack/PlayerAttack.anim.meta
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-00.png
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-00.png.meta
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-01.png
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-01.png.meta
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-02.png
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-02.png.meta
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-03.png
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-03.png.meta
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-04.png
+    - Assets/Sprites/Player Sprites/Attack/adventurer-attack2-04.png.meta
+    - Assets/Sprites/Player Sprites/Attack/atk1.png
+    - Assets/Sprites/Player Sprites/Attack/atk1.png.meta
+    - Assets/Sprites/Player Sprites/Attack/atk2.png
+    - Assets/Sprites/Player Sprites/Attack/atk2.png.meta
+    - Assets/Sprites/Player Sprites/Attack/atk3.png
+    - Assets/Sprites/Player Sprites/Attack/atk3.png.meta
+    - Assets/Sprites/Player Sprites/Attack/atk4.png
+    - Assets/Sprites/Player Sprites/Attack/atk4.png.meta
+    - Assets/Sprites/Player Sprites/Attack/atk5.png
+    - Assets/Sprites/Player Sprites/Attack/atk5.png.meta
+    - Assets/Sprites/Player Sprites/Attack/atk6.png
+    - Assets/Sprites/Player Sprites/Attack/atk6.png.meta
+    - Assets/Sprites/Player Sprites/Heart_4.png
+    - Assets/Sprites/Player Sprites/Heart_4.png.meta
+    - Assets/Sprites/Player Sprites/Idle.meta
+    - Assets/Sprites/Player Sprites/Idle/1.png
+    - Assets/Sprites/Player Sprites/Idle/1.png.meta
+    - Assets/Sprites/Player Sprites/Idle/2.png
+    - Assets/Sprites/Player Sprites/Idle/2.png.meta
+    - Assets/Sprites/Player Sprites/Idle/3.png
+    - Assets/Sprites/Player Sprites/Idle/3.png.meta
+    - Assets/Sprites/Player Sprites/Idle/4.png
+    - Assets/Sprites/Player Sprites/Idle/4.png.meta
+    - Assets/Sprites/Player Sprites/Idle/5.png
+    - Assets/Sprites/Player Sprites/Idle/5.png.meta
+    - Assets/Sprites/Player Sprites/Idle/6.png
+    - Assets/Sprites/Player Sprites/Idle/6.png.meta
+    - Assets/Sprites/Player Sprites/Idle/PlayerIdle.anim
+    - Assets/Sprites/Player Sprites/Idle/PlayerIdle.anim.meta
+    - Assets/Sprites/Player Sprites/Idle/adventurer-idle-00.png
+    - Assets/Sprites/Player Sprites/Idle/adventurer-idle-00.png.meta
+    - Assets/Sprites/Player Sprites/Idle/adventurer-idle-01.png
+    - Assets/Sprites/Player Sprites/Idle/adventurer-idle-01.png.meta
+    - Assets/Sprites/Player Sprites/Idle/adventurer-idle-02.png
+    - Assets/Sprites/Player Sprites/Idle/adventurer-idle-02.png.meta
+    - Assets/Sprites/Player Sprites/Jump.meta
+    - Assets/Sprites/Player Sprites/Jump/1.png
+    - Assets/Sprites/Player Sprites/Jump/1.png.meta
+    - Assets/Sprites/Player Sprites/Jump/2.png
+    - Assets/Sprites/Player Sprites/Jump/2.png.meta
+    - Assets/Sprites/Player Sprites/Jump/PlayerJump.anim
+    - Assets/Sprites/Player Sprites/Jump/PlayerJump.anim.meta
+    - Assets/Sprites/Player Sprites/Move.meta
+    - Assets/Sprites/Player Sprites/Move/1.png
+    - Assets/Sprites/Player Sprites/Move/1.png.meta
+    - Assets/Sprites/Player Sprites/Move/2.png
+    - Assets/Sprites/Player Sprites/Move/2.png.meta
+    - Assets/Sprites/Player Sprites/Move/3.png
+    - Assets/Sprites/Player Sprites/Move/3.png.meta
+    - Assets/Sprites/Player Sprites/Move/4.png
+    - Assets/Sprites/Player Sprites/Move/4.png.meta
+    - Assets/Sprites/Player Sprites/Move/5.png
+    - Assets/Sprites/Player Sprites/Move/5.png.meta
+    - Assets/Sprites/Player Sprites/Move/6.png
+    - Assets/Sprites/Player Sprites/Move/6.png.meta
+    - Assets/Sprites/Player Sprites/Move/7.png
+    - Assets/Sprites/Player Sprites/Move/7.png.meta
+    - Assets/Sprites/Player Sprites/Move/8.png
+    - Assets/Sprites/Player Sprites/Move/8.png.meta
+    - Assets/Sprites/Player Sprites/Move/PlayerWalking.anim
+    - Assets/Sprites/Player Sprites/Move/PlayerWalking.anim.meta
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-00.png
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-00.png.meta
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-01.png
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-01.png.meta
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-02.png
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-02.png.meta
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-03.png
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-03.png.meta
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-04.png
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-04.png.meta
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-05.png
+    - Assets/Sprites/Player Sprites/Move/adventurer-run-05.png.meta
+    - Assets/Sprites/PoweUps.meta
+    - Assets/Sprites/PoweUps/genericItem_color_089.png
+    - Assets/Sprites/PoweUps/genericItem_color_089.png.meta
+    - Assets/Sprites/PoweUps/genericItem_color_093.png
+    - Assets/Sprites/PoweUps/genericItem_color_093.png.meta
+    - Assets/Sprites/Stars.meta
+    - Assets/Sprites/Stars/Stars_01_128x128_004 1.png
+    - Assets/Sprites/Stars/Stars_01_128x128_004 1.png.meta
+    - Assets/Sprites/Stars/Stars_01_128x128_027 1.png
+    - Assets/Sprites/Stars/Stars_01_128x128_027 1.png.meta
+    - Assets/Sprites/Tiles.meta
+    - Assets/Sprites/Tiles/1.PNG
+    - Assets/Sprites/Tiles/1.PNG.meta
+    - Assets/Sprites/Tiles/10.PNG
+    - Assets/Sprites/Tiles/10.PNG.meta
+    - Assets/Sprites/Tiles/2.PNG
+    - Assets/Sprites/Tiles/2.PNG.meta
+    - Assets/Sprites/Tiles/4.PNG
+    - Assets/Sprites/Tiles/4.PNG.meta
+    - Assets/Sprites/Tiles/6.PNG
+    - Assets/Sprites/Tiles/6.PNG.meta
+    - Assets/Sprites/Tiles/7.PNG
+    - Assets/Sprites/Tiles/7.PNG.meta
+    - Assets/Sprites/Tiles/8.PNG
+    - Assets/Sprites/Tiles/8.PNG.meta
+    - Assets/Sprites/Tiles/New 9.png
+    - Assets/Sprites/Tiles/New 9.png.meta
+    - Assets/Sprites/Tiles/TileMapImage.meta
+    - Assets/Sprites/Tiles/TileMapImage/1.asset
+    - Assets/Sprites/Tiles/TileMapImage/1.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/10.asset
+    - Assets/Sprites/Tiles/TileMapImage/10.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/2.asset
+    - Assets/Sprites/Tiles/TileMapImage/2.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/4.asset
+    - Assets/Sprites/Tiles/TileMapImage/4.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/6.asset
+    - Assets/Sprites/Tiles/TileMapImage/6.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/7.asset
+    - Assets/Sprites/Tiles/TileMapImage/7.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/8.asset
+    - Assets/Sprites/Tiles/TileMapImage/8.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/New 9.asset
+    - Assets/Sprites/Tiles/TileMapImage/New 9.asset.meta
+    - Assets/Sprites/Tiles/TileMapImage/testimage9.asset
+    - Assets/Sprites/Tiles/TileMapImage/testimage9.asset.meta
+    - Assets/Sprites/Tiles/env.prefab
+    - Assets/Sprites/Tiles/env.prefab.meta
+    - Assets/Sprites/Tiles/testimage9.png
+    - Assets/Sprites/Tiles/testimage9.png.meta
+    - Assets/Sprites/UI SPRITES.meta
+    - Assets/Sprites/UI SPRITES/1.png
+    - Assets/Sprites/UI SPRITES/1.png.meta
+    - Assets/Sprites/UI SPRITES/4.png
+    - Assets/Sprites/UI SPRITES/4.png.meta
+    - Assets/Sprites/UI SPRITES/6.png
+    - Assets/Sprites/UI SPRITES/6.png.meta
+    - Assets/Sprites/UI SPRITES/IntroImage.meta
+    - Assets/Sprites/UI SPRITES/IntroImage/part1.jpg
+    - Assets/Sprites/UI SPRITES/IntroImage/part1.jpg.meta
+    - Assets/Sprites/UI SPRITES/IntroImage/part2.jpg
+    - Assets/Sprites/UI SPRITES/IntroImage/part2.jpg.meta
+    - Assets/Sprites/UI SPRITES/IntroImage/part3.jpg
+    - Assets/Sprites/UI SPRITES/IntroImage/part3.jpg.meta
+    - Assets/Sprites/UI SPRITES/LungsBG.png
+    - Assets/Sprites/UI SPRITES/LungsBG.png.meta
+    - Assets/Sprites/UI SPRITES/Padlock.png
+    - Assets/Sprites/UI SPRITES/Padlock.png.meta
+    - Assets/Sprites/UI SPRITES/PlayButton.controller
+    - Assets/Sprites/UI SPRITES/PlayButton.controller.meta
+    - Assets/Sprites/UI SPRITES/Quit.controller
+    - Assets/Sprites/UI SPRITES/Quit.controller.meta
+    - Assets/Sprites/UI SPRITES/TIPS.meta
+    - Assets/Sprites/UI SPRITES/TIPS/5TRp46kTa.jpg
+    - Assets/Sprites/UI SPRITES/TIPS/5TRp46kTa.jpg.meta
+    - Assets/Sprites/UI SPRITES/TIPS/cartoon-g6592a264b_1280.png
+    - Assets/Sprites/UI SPRITES/TIPS/cartoon-g6592a264b_1280.png.meta
+    - Assets/Sprites/UI SPRITES/TIPS/vegetables-g1ad86ae20_1280.png
+    - Assets/Sprites/UI SPRITES/TIPS/vegetables-g1ad86ae20_1280.png.meta
+    - Assets/Sprites/UI SPRITES/UI.meta
+    - Assets/Sprites/UI SPRITES/UI/02_Buttons_Animated.png
+    - Assets/Sprites/UI SPRITES/UI/02_Buttons_Animated.png.meta
+    - Assets/Sprites/UI SPRITES/UI/04_Box_Frames_9Patch.png
+    - Assets/Sprites/UI SPRITES/UI/04_Box_Frames_9Patch.png.meta
+    - Assets/Sprites/UI SPRITES/UI/BlueButton.png
+    - Assets/Sprites/UI SPRITES/UI/BlueButton.png.meta
+    - Assets/Sprites/UI SPRITES/UI/BlueButtonPressed.png
+    - Assets/Sprites/UI SPRITES/UI/BlueButtonPressed.png.meta
+    - Assets/Sprites/UI SPRITES/UI/BookController.controller
+    - Assets/Sprites/UI SPRITES/UI/BookController.controller.meta
+    - Assets/Sprites/UI SPRITES/UI/CloseBook.anim
+    - Assets/Sprites/UI SPRITES/UI/CloseBook.anim.meta
+    - Assets/Sprites/UI SPRITES/UI/CloseBookNow.controller
+    - Assets/Sprites/UI SPRITES/UI/CloseBookNow.controller.meta
+    - Assets/Sprites/UI SPRITES/UI/EmptyStar.png
+    - Assets/Sprites/UI SPRITES/UI/EmptyStar.png.meta
+    - Assets/Sprites/UI SPRITES/UI/FilpOpen.anim
+    - Assets/Sprites/UI SPRITES/UI/FilpOpen.anim.meta
+    - Assets/Sprites/UI SPRITES/UI/FlipBook.controller
+    - Assets/Sprites/UI SPRITES/UI/FlipBook.controller.meta
+    - Assets/Sprites/UI SPRITES/UI/OpenABook.anim
+    - Assets/Sprites/UI SPRITES/UI/OpenABook.anim.meta
+    - Assets/Sprites/UI SPRITES/UI/PowerUps.meta
+    - Assets/Sprites/UI SPRITES/UI/PowerUps/icons8-pills-58.png
+    - Assets/Sprites/UI SPRITES/UI/PowerUps/icons8-pills-58.png.meta
+    - Assets/Sprites/UI SPRITES/UI/PowerUps/icons8-pills-60 (1).png
+    - Assets/Sprites/UI SPRITES/UI/PowerUps/icons8-pills-60 (1).png.meta
+    - Assets/Sprites/UI SPRITES/UI/PowerUps/icons8-pills-64 (1).png
+    - Assets/Sprites/UI SPRITES/UI/PowerUps/icons8-pills-64 (1).png.meta
+    - Assets/Sprites/UI SPRITES/UI/RADL_Book_white.png
+    - Assets/Sprites/UI SPRITES/UI/RADL_Book_white.png.meta
+    - Assets/Sprites/UI SPRITES/UI/StarIcon.png
+    - Assets/Sprites/UI SPRITES/UI/StarIcon.png.meta
+    - Assets/Sprites/UI SPRITES/UI/face_on_cross.png
+    - Assets/Sprites/UI SPRITES/UI/face_on_cross.png.meta
+    - Assets/Sprites/UI SPRITES/UI/paper_panel_1611_x_174.png
+    - Assets/Sprites/UI SPRITES/UI/paper_panel_1611_x_174.png.meta
+    - Assets/Sprites/UI SPRITES/UI/paper_panel_242_x_240.png
+    - Assets/Sprites/UI SPRITES/UI/paper_panel_242_x_240.png.meta
+    - Assets/Sprites/UI SPRITES/UI/paper_panel_355_x_1244.png
+    - Assets/Sprites/UI SPRITES/UI/paper_panel_355_x_1244.png.meta
+    - Assets/Sprites/UI SPRITES/UI/sticky-note-ga10bc1373_1280.png
+    - Assets/Sprites/UI SPRITES/UI/sticky-note-ga10bc1373_1280.png.meta
+    - Assets/Sprites/UI SPRITES/screenshot.PNG
+    - Assets/Sprites/UI SPRITES/screenshot.PNG.meta
+    - Assets/Sprites/environment.png
+    - Assets/Sprites/environment.png.meta
+    - Assets/Sprites/icons8-tips-240.png
+    - Assets/Sprites/icons8-tips-240.png.meta
+    - Packages/manifest.json
+    - Packages/packages-lock.json
+    - ProjectSettings/AudioManager.asset
+    - ProjectSettings/ClusterInputManager.asset
+    - ProjectSettings/DynamicsManager.asset
+    - ProjectSettings/EditorBuildSettings.asset
+    - ProjectSettings/EditorSettings.asset
+    - ProjectSettings/GraphicsSettings.asset
+    - ProjectSettings/InputManager.asset
+    - ProjectSettings/NavMeshAreas.asset
+    - ProjectSettings/Physics2DSettings.asset
+    - ProjectSettings/PresetManager.asset
+    - ProjectSettings/ProjectSettings.asset
+    - ProjectSettings/ProjectVersion.txt
+    - ProjectSettings/QualitySettings.asset
+    - ProjectSettings/TagManager.asset
+    - ProjectSettings/TimeManager.asset
+    - ProjectSettings/UnityConnectSettings.asset
+    - ProjectSettings/VFXManager.asset
+    - ProjectSettings/VersionControlSettings.asset
+    - 
+    m_Values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  RevisionSummary: 
+  ChangesSearchValue: 
+  SelectedHistoryRevision: 
+  HistoryPageNumber: 0
+  TabIndex: 0

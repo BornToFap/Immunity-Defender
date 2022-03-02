@@ -1,0 +1,57 @@
+
+=== Tue Dec 28 16:31:52 2021
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were updated:
+  com.unity.2d.animation from version 5.0.7 to 5.0.9
+  com.unity.2d.psdimporter from version 4.1.0 to 4.1.2
+  com.unity.2d.spriteshape from version 5.1.4 to 5.1.6
+
+=== Wed Mar  2 04:08:32 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.2d.animation from version 5.0.9 to 7.0.3
+  com.unity.2d.pixel-perfect from version 4.0.1 to 5.0.1
+  com.unity.2d.psdimporter from version 4.1.2 to 6.0.2
+  com.unity.2d.spriteshape from version 5.1.6 to 7.0.3
+  com.unity.cinemachine from version 2.6.11 to 2.8.4
+  com.unity.collab-proxy from version 1.15.4 to 1.15.12
+  com.unity.ide.rider from version 2.0.7 to 3.0.12
+  com.unity.ide.visualstudio from version 2.0.12 to 2.0.14
+  com.unity.ide.vscode from version 1.2.4 to 1.2.5
+  com.unity.timeline from version 1.4.8 to 1.6.4
+
+=== Wed Mar  2 05:06:01 2022
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were added:
+  com.unity.visualscripting@1.7.6
+The following packages were removed:
+  com.unity.2d.animation@7.0.3
+  com.unity.2d.pixel-perfect@5.0.1
+  com.unity.2d.psdimporter@6.0.2
+  com.unity.2d.sprite@1.0.0
+  com.unity.2d.spriteshape@7.0.3
+  com.unity.2d.tilemap@1.0.0
+  com.unity.cinemachine@2.8.4
+
+=== Wed Mar  2 06:18:40 2022
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were updated:
+  com.unity.ide.rider from version 3.0.12 to 2.0.7
+  com.unity.ide.vscode from version 1.2.5 to 1.2.4
+  com.unity.timeline from version 1.6.4 to 1.4.8
+The following packages were removed:
+  com.unity.2d.sprite@1.0.0
+  com.unity.cinemachine@2.8.4
+  com.unity.visualscripting@1.7.6
