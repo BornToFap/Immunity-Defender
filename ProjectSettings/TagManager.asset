@@ -51,15 +51,15 @@ TagManager:
   - name: Enviroment
     uniqueID: 3804391705
     locked: 0
-  - name: Encyclopedia
-    uniqueID: 3596265317
-    locked: 0
   - name: Enemy
     uniqueID: 3254180881
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 351498071
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Encyclopedia
+    uniqueID: 3596265317
     locked: 0

@@ -13,6 +13,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField] protected LayerMask platform_mask;
     [SerializeField] protected BoxCollider2D detectcollider;
     [SerializeField] protected Transform groundcheckpos;
+    [SerializeField] protected GameObject enemyparticle;
      protected Rigidbody2D EnemyRigid;
     [SerializeField] protected int  Vidnum, Vstatus = 0;
    [SerializeField] Vector2 startingpos;
@@ -30,6 +31,7 @@ public class EnemySystem : MonoBehaviour
         EnemyRigid = GetComponentInChildren<Rigidbody2D>();
         enemycollider = GetComponentInChildren<BoxCollider2D>();
         anim = GetComponent<Animator>();
+       
         if (PlayerPrefs.GetInt("VID" + Vidnum, Vstatus) == 0)
         {
             PlayerPrefs.SetInt("VID" + Vidnum, Vstatus);
@@ -114,8 +116,12 @@ public class EnemySystem : MonoBehaviour
                 PlayerPrefs.SetInt("VID" + Vidnum, 1);
             }
             Debug.Log("VirusStatus:" + PlayerPrefs.GetInt("VID" + Vidnum, Vstatus));
+            
            FindObjectOfType<LevelManager>().Play("EnemyDeath");
+            enemyparticle.SetActive(true);
             Destroy(this.gameObject);
+           
+           
         }
         
     }
