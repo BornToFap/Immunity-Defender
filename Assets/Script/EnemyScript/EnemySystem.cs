@@ -183,13 +183,14 @@ public class EnemySystem : MonoBehaviour
     Vector2 raycastdirect;
     private bool RaycastDetectPLayer()
     {
-        if(transform.localScale.x > 1)
+        if(transform.localScale.x > 0)
         {
-            raycastdirect = Vector2.right;
+            raycastdirect = Vector2.left;
         }
         else
         {
-            raycastdirect = Vector2.left;
+          
+            raycastdirect = Vector2.right;
         }
         RaycastHit2D hit = Physics2D.Raycast(transform.position, raycastdirect, raycastLenght, raycastMask);
         Color raycolor;

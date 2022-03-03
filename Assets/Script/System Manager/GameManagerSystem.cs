@@ -18,7 +18,8 @@ public class GameManagerSystem : MonoBehaviour
 
     [SerializeField] private GameObject VirusButtons;
     [SerializeField] private GameObject CellsButtons;
-   public Animator anim;
+    public GameObject ImmuneBoosterButton;
+    public Animator anim;
     public Animator Flipanim;
     public GameObject bookanim;
     public GameObject ObjectFlip;
@@ -32,7 +33,7 @@ public class GameManagerSystem : MonoBehaviour
     public Animator closeAnim;
     public GameObject CloseGame;
 
-    public GameObject ImmuneBoosterObject;
+
     PlayerSystem playeron;
     private void Awake()
     {
@@ -196,7 +197,7 @@ public class GameManagerSystem : MonoBehaviour
  
             CellsButtons.SetActive(false);
             VirusButtons.SetActive(true);
-        ImmuneBoosterObject.SetActive(false);
+        ImmuneBoosterButton.SetActive(false);
 
     }
 
@@ -205,13 +206,13 @@ public class GameManagerSystem : MonoBehaviour
       
             VirusButtons.SetActive(false);
             CellsButtons.SetActive(true);
-        ImmuneBoosterObject.SetActive(false);
+        ImmuneBoosterButton.SetActive(false);
     }
 
 
     public void DisplayImmuneBooster()
     {
-        ImmuneBoosterObject.SetActive(true);
+        ImmuneBoosterButton.SetActive(true);
         VirusButtons.SetActive(false);
         CellsButtons.SetActive(false);
     }

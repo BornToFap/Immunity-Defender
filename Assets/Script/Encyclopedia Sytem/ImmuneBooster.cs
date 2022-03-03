@@ -12,11 +12,12 @@ public class ImmuneBooster : MonoBehaviour
     [SerializeField] List<Sprite> CellsSprite = new List<Sprite>();
     [SerializeField] List<string> CellsDetails = new List<string>();
 
-    //public GameObject virusActive;
-    public GameObject CellDetailsP;
-    public GameObject CellButton;
+ 
+    public GameObject ICellDetailsP;
+    public GameObject ImnCellButton;
     GameManagerSystem gameM;
 
+    
     void Start()
     {
         gameM = GetComponentInParent<GameManagerSystem>();
@@ -26,21 +27,32 @@ public class ImmuneBooster : MonoBehaviour
     {
         if (gameM.ButtonMenu.activeInHierarchy)
         {
-            CellDetailsP.SetActive(false);
+            ICellDetailsP.SetActive(false);
+            StopAllCoroutines();
         }
     }
     public void Cells01()
     {
+        ImnCellButton.SetActive(false);
         gameM.ObjectFlip.SetActive(true);
         gameM.FlipABook = true;
-        int i = CellsSprite.FindIndex(0, CellsSprite.Count, s => s.name == "VitaminC");
-        CellsImage.sprite = CellsSprite[i];
-        CellsName.text = "Vitamin C (Ascorbic Acid)";
-        CellDetails.text = CellsDetails[0];
-        CellDetailsP.SetActive(true);
-        CellButton.SetActive(false);
+     
+          
+            int i = CellsSprite.FindIndex(0, CellsSprite.Count, s => s.name == "VitaminC");
+            CellsImage.sprite = CellsSprite[i];
+            CellsName.text = "Vitamin C (Ascorbic Acid)";
+            CellDetails.text = CellsDetails[0];
+        StartCoroutine(ActivtaePanel());
+       
+
     }
 
+    IEnumerator ActivtaePanel()
+    {
+        yield return new WaitForSeconds(1f);
+        ICellDetailsP.SetActive(true);
+    }
+    /*
     public void Cells02()
     {
         gameM.ObjectFlip.SetActive(true);
@@ -75,5 +87,6 @@ public class ImmuneBooster : MonoBehaviour
         CellDetailsP.SetActive(true);
         CellButton.SetActive(false);
     }
+    */
 
 }
