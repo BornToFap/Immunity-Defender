@@ -65,16 +65,21 @@ public class PlayerSystem : MonoBehaviour
     }
     void FixedUpdate()
     {
+       
+        if (playerHeath <= 0)
+        {
+            //FindObjectOfType<GameManagerSystem>().RestartingOnDeath();
+           // Time.timeScale = 0f;
+            Destroy(this.gameObject);
+           
+        }
       //  Attack();
         PlayerMovement();
         PlayerHealthUI();
-
-        if (playerHeath <= 0)
-        {
-            Destroy(this.gameObject);
-
-        }
         knockBackDirection();
+
+
+
     }
 
     private void PlayerMovement()
@@ -173,6 +178,19 @@ public class PlayerSystem : MonoBehaviour
         float extraHeight = 0.1f;
         RaycastHit2D groundHit = Physics2D.CapsuleCast(mycapsulcollider.bounds.center, mycapsulcollider.bounds.size, CapsuleDirection2D.Horizontal, 0f, Vector2.down, extraHeight, platform_mask);
         // RaycastHit2D groundHit = Physics2D.BoxCast(mycirclecollider.bounds.center, mycirclecollider.bounds.size, 0f, Vector2.down, extraHeight, platform_mask);
+        Color raycolor;
+        if (groundHit.collider != null)
+        {
+
+            raycolor = Color.green;
+
+        }
+        else
+        {
+            raycolor = Color.red;
+        }
+        Debug.DrawRay(mycapsulcollider.bounds.center, Vector2.down * (mycapsulcollider.bounds.extents.y + extraHeight), raycolor);
+      //  Debug.DrawRay(transform.position, raycastdirect * 3f, raycolor);
         return groundHit.collider != null;
     }
     public Vector2 raycastdirect;
@@ -250,25 +268,25 @@ public class PlayerSystem : MonoBehaviour
 
         if (collision.gameObject.tag == "VitaminC")
         {
-            // var TextMesh = mesh.GetComponent<TextMesh>();
-            // TextMesh.text = "Attack Up";
-            // mesh.SetActive(true);
-            // StartCoroutine(deactivateText());
+            FindObjectOfType<LevelManager>().Play("PowerUpAudio");
             Destroy(collision.gameObject);
             NumHeart++;
         }
         else if (collision.gameObject.tag == "VitaminD")
         {
+            FindObjectOfType<LevelManager>().Play("PowerUpAudio");
             Destroy(collision.gameObject);
             attackpower++;
         }
         else if (collision.gameObject.tag == "VitaminE")
         {
+            FindObjectOfType<LevelManager>().Play("PowerUpAudio");
             Destroy(collision.gameObject);
             playerHeath++;
         }
         else if (collision.gameObject.tag == "Zinc")
         {
+            FindObjectOfType<LevelManager>().Play("PowerUpAudio");
             Destroy(collision.gameObject);
             Invincible = true;
             StartCoroutine(InvincibleTimer());

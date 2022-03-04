@@ -23,6 +23,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private AudioAssets[] audios;
     private void Awake()
     {
+       
+    }
+
+    private void Start()
+    {
         if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
@@ -42,10 +47,7 @@ public class LevelManager : MonoBehaviour
             s.source.playOnAwake = s.PlayOnAwake;
 
         }
-    }
 
-    private void Start()
-    {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
             Play("MainMenu");
@@ -56,19 +58,23 @@ public class LevelManager : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (SceneManager.GetActiveScene().name != "MainMenu")
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-           
-        
+
+            MainMenuCanvs.SetActive(true);
+            
+        }else if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+          
             AudioAssets s = Array.Find(audios, sounds => sounds.audioName == "MainMenu");
             s.source.Stop();
-        }  
+        }
         
     }
 
     public async void LoadScene(string sceneName)
     {
-       
+        
         Target = 0;
         progressBar.fillAmount = 0;
         var scene = SceneManager.LoadSceneAsync(sceneName);
@@ -83,10 +89,12 @@ public class LevelManager : MonoBehaviour
 
         await Task.Delay(3000);
         scene.allowSceneActivation = true;
-        if(MainMenuCanvs != null)
+        if (MainMenuCanvs != null)
         {
             MainMenuCanvs.SetActive(false);
         }
+
+        await Task.Delay(1000);
         _LevelCanvas.SetActive(false);
        
     }
@@ -109,15 +117,6 @@ public class LevelManager : MonoBehaviour
         }
     }
     
-    public void StartGame()
-    {
-     
-        SceneManager.LoadScene("IntroCenimatic");
-    }
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
 
     public void Play(string SoundName)
     {

@@ -34,7 +34,11 @@ public class GameManagerSystem : MonoBehaviour
     public GameObject CloseGame;
 
 
-    PlayerSystem playeron;
+    [SerializeField] private GameObject GameOverText;
+
+   public PlayerSystem playeron;
+
+    public int playerHealthLeft;
     private void Awake()
     {
         if(instances != null && instances != this)
@@ -48,12 +52,14 @@ public class GameManagerSystem : MonoBehaviour
 
     private void Start()
     {
-       
+        
     }
     public string scenename;
 
     private void Update()
     {
+        
+       
         if(SceneManager.GetActiveScene().name == "MainMenu")
         {
             this.gameObject.SetActive(false);
@@ -99,25 +105,25 @@ public class GameManagerSystem : MonoBehaviour
 
             }
         }
+
         if (SceneManager.GetActiveScene().buildIndex >= 3)
         {
             EnemyNumber.gameObject.SetActive(true);
-            playeron = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSystem>();
-            if (playeron != null)
+            if (FindObjectOfType<PlayerSystem>() != null)
             {
-                
-                if (playeron.playerHeath <= 0)
-                {
-                    int i = SceneManager.GetActiveScene().buildIndex;
-                    SceneManager.LoadScene(i);
-                }
+                playerHealthLeft = FindObjectOfType<PlayerSystem>().playerHeath;
             }
-        }
-        else
+            RestartingOnDeath(playerHealthLeft);
+
+
+        } else
         {
             EnemyNumber.gameObject.SetActive(false);
         }
-        
+
+     
+
+
     }
     private void LateUpdate()
     {
@@ -152,6 +158,7 @@ public class GameManagerSystem : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        this.gameObject.SetActive(false);
         MenuHandler.SetActive(false);
     }
 
@@ -229,7 +236,7 @@ public class GameManagerSystem : MonoBehaviour
            EnemyNumber.text = "Viruses Left: " + enemyholder.Length.ToString();
             if (enemyholder.Length <= 0)
             {
-                
+                FindObjectOfType<LevelManager>().Play("LevelClearAudio");
                 lvlclear.SetActive(true);
               //  Time.timeScale = 0.5f;
              //   Time.fixedDeltaTime = 0.02f * Time.timeScale;
@@ -242,6 +249,7 @@ public class GameManagerSystem : MonoBehaviour
         {
            // Debug.Log("Map scene");
             lvlclear.SetActive(false);
+
             StopAllCoroutines();
         }
         
@@ -269,22 +277,31 @@ public class GameManagerSystem : MonoBehaviour
             if(playercomp.playerHeath == playercomp.NumHeart)
             {
                 currentStars = 3;
-        
+            if (currentStars >= PlayerPrefs.GetInt("Lv" + levelindex, 0))
+            {
                 PlayerPrefs.SetInt("Lv" + levelindex, currentStars);
+            }
 
 
         }
             else if(playercomp.playerHeath >= Mathf.RoundToInt((playercomp.playerHeath/playercomp.NumHeart)) && playercomp.playerHeath <= playercomp.NumHeart)
             {
                 currentStars = 2;
+            if (currentStars >= PlayerPrefs.GetInt("Lv" + levelindex, 0))
+            {
                 PlayerPrefs.SetInt("Lv" + levelindex, currentStars);
+            }
+     
         
             }
             else if (playercomp.playerHeath >= playercomp.NumHeart  && playercomp.playerHeath <= Mathf.RoundToInt((playercomp.playerHeath / playercomp.NumHeart)))
             {
-                currentStars = 1;      
+                currentStars = 1;
+            if (currentStars >= PlayerPrefs.GetInt("Lv" + levelindex, 0))
+            {
                 PlayerPrefs.SetInt("Lv" + levelindex, currentStars);
-           }
+            }
+        }
         else
         {
             currentStars = 0;
@@ -302,5 +319,41 @@ public class GameManagerSystem : MonoBehaviour
         GameManagerSystem data = new GameManagerSystem();
         formatter.Serialize(stream, data);
     }
+
+    public void RestartingOnDeath(int Health)
+    {
+
+        if (Health <= 0)
+        {
+            GameOverText.SetActive(true);
+            FindObjectOfType<LevelManager>().Play("LevelLoose");
+
+
+            if (Input.GetKeyDown(KeyCode.R))
+                {
+                    GameOverText.SetActive(false);
+                    FindObjectOfType<LevelManager>().LoadScene(SceneManager.GetActiveScene().name);
+
+                }
+                else if (Input.GetKeyDown(KeyCode.M))
+                {
+                    GameOverText.SetActive(false);
+                    currentStars = 0;
+                    PlayerPrefs.SetInt("Lv" + levelindex, currentStars);
+                    FindObjectOfType<LevelManager>().LoadScene("MapScene");
+                }
+
+            }
+        else
+        {
+            GameOverText.SetActive(false);
+        }
+    }
+
+
+     
+        
   
 }
+
+

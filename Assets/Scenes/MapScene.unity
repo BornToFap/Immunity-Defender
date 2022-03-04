@@ -1304,6 +1304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5256331921619898797, guid: bce36174c56a85841847d898e0552a23, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8182905836524166593, guid: bce36174c56a85841847d898e0552a23, type: 3}
       propertyPath: m_Name
       value: Game_Manager
@@ -1391,6 +1395,22 @@ PrefabInstance:
     - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182905836524166623, guid: bce36174c56a85841847d898e0552a23, type: 3}
+      propertyPath: playeron
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182905836857616406, guid: bce36174c56a85841847d898e0552a23, type: 3}
+      propertyPath: CellsDetails.Array.data[0]
+      value: Vitamin C, also known as ascorbic acid, is a water-soluble vitamin and
+        antioxidant that may neutralize unstable chemicals and assist our bodies
+        avoid or reverse cellular damage. It also participates in a number of metabolic
+        processes connected to immunological health. Vitamin C is an important vitamin.
+        It helps your immune system defend itself by supporting several cellular
+        operations of your body's adaptive immune systems. Because it is an antioxidant,
+        it can also combat free radicals in the body, reducing inflammation and increasing
+        immunity. It can maintain your skin healthy and act as a barrier to hazardous
+        chemicals entering your body.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bce36174c56a85841847d898e0552a23, type: 3}

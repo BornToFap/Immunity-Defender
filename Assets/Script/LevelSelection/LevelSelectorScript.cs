@@ -60,6 +60,7 @@ public class LevelSelectorScript : MonoBehaviour
         if (Unlocked == true)
         {
             FindObjectOfType<LevelManager>().LoadScene(levelName);
+          
             //SceneManager.LoadScene(levelName);
            
         }

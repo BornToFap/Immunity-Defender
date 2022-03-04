@@ -119,6 +119,8 @@ public class EnemySystem : MonoBehaviour
             
            FindObjectOfType<LevelManager>().Play("EnemyDeath");
             enemyparticle.SetActive(true);
+
+            
             Destroy(this.gameObject);
            
            
