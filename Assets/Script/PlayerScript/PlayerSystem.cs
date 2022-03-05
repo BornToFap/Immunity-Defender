@@ -12,7 +12,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private int attackpower;
     Rigidbody2D myrigid;
     BoxCollider2D mycirclecollider;
-    CapsuleCollider2D mycapsulcollider;
+   // CapsuleCollider2D mycapsulcollider;
     Vector2 m_Velocity = Vector2.zero;
     bool FacingRight = true;
     [SerializeField] private float KnockBackForce;
@@ -27,7 +27,7 @@ public class PlayerSystem : MonoBehaviour
         mesh = gameObject.transform.GetChild(0).gameObject;
         myrigid = gameObject.GetComponent<Rigidbody2D>();
         mycirclecollider = GetComponent<BoxCollider2D>();
-        mycapsulcollider = GetComponent<CapsuleCollider2D>();
+      //  mycapsulcollider = GetComponent<CapsuleCollider2D>();
         myanim = GetComponent<Animator>();
         TimeBtwAttack = startTimeBtwAttack;
 
@@ -69,7 +69,8 @@ public class PlayerSystem : MonoBehaviour
         if (playerHeath <= 0)
         {
             //FindObjectOfType<GameManagerSystem>().RestartingOnDeath();
-           // Time.timeScale = 0f;
+            // Time.timeScale = 0f;
+          
             Destroy(this.gameObject);
            
         }
@@ -176,8 +177,8 @@ public class PlayerSystem : MonoBehaviour
     private bool DetectGround()
     {
         float extraHeight = 0.1f;
-        RaycastHit2D groundHit = Physics2D.CapsuleCast(mycapsulcollider.bounds.center, mycapsulcollider.bounds.size, CapsuleDirection2D.Horizontal, 0f, Vector2.down, extraHeight, platform_mask);
-        // RaycastHit2D groundHit = Physics2D.BoxCast(mycirclecollider.bounds.center, mycirclecollider.bounds.size, 0f, Vector2.down, extraHeight, platform_mask);
+     //   RaycastHit2D groundHit = Physics2D.CapsuleCast(mycapsulcollider.bounds.center, mycapsulcollider.bounds.size, CapsuleDirection2D.Horizontal, 0f, Vector2.down, extraHeight, platform_mask);
+       RaycastHit2D groundHit = Physics2D.BoxCast(mycirclecollider.bounds.center, mycirclecollider.bounds.size, 0f, Vector2.down, extraHeight, platform_mask);
         Color raycolor;
         if (groundHit.collider != null)
         {
@@ -189,7 +190,7 @@ public class PlayerSystem : MonoBehaviour
         {
             raycolor = Color.red;
         }
-        Debug.DrawRay(mycapsulcollider.bounds.center, Vector2.down * (mycapsulcollider.bounds.extents.y + extraHeight), raycolor);
+        Debug.DrawRay(mycirclecollider.bounds.center, Vector2.down * (mycirclecollider.bounds.extents.y + extraHeight), raycolor);
       //  Debug.DrawRay(transform.position, raycastdirect * 3f, raycolor);
         return groundHit.collider != null;
     }

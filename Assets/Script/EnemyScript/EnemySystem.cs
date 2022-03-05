@@ -54,7 +54,10 @@ public class EnemySystem : MonoBehaviour
     {
       //  Vector3.MoveTowards(transform.position, PointBtrans, speedtowards * Time.deltaTime);
 
-
+        if(player == null)
+        {
+            return;
+        }
         if (!RaycastDetectPLayer() && Ispattroling)
         {
             Pattroling();

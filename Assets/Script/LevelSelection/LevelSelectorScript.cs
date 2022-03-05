@@ -14,6 +14,7 @@ public class LevelSelectorScript : MonoBehaviour
    
     private void Update()
     {
+        
         UpdateLevelImage();
        UpdateLevelSelector();
     }
@@ -24,10 +25,7 @@ public class LevelSelectorScript : MonoBehaviour
         {
             Unlocked = true;
         }
-        else
-        {
-
-        }
+    
      
       //  Debug.Log(PlayerPrefs.GetInt("Lv" + lvlindex));
     }

@@ -3747,6 +3747,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726893611}
   m_CullTransparentMesh: 1
+--- !u!1 &1765030291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765030292}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765030292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765030291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.739436, y: -1.9451504, z: -12.605327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786273349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,7 +4288,7 @@ MonoBehaviour:
   - {fileID: 1881237873}
   - {fileID: 1217934540}
   - {fileID: 1609581224}
-  lvlindex: 4
+  lvlindex: 6
   star_sprite: {fileID: 21300000, guid: fdffca901bf065246871c4fe7ee37ce9, type: 3}
 --- !u!114 &1884890652
 MonoBehaviour:
@@ -4313,7 +4343,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level2
+          m_StringArgument: Level4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1884890653
@@ -4961,136 +4991,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095059709}
   m_CullTransparentMesh: 1
---- !u!1001 &8182905836857616399
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5256331921619898797, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905835096523485, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: IDNUM
-      value: 2200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905835888995666, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: IDNUM
-      value: 3300
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836119877367, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: IDNUM
-      value: 4400
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166593, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_Name
-      value: Game_Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 996
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 501
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166620, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836524166623, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: playeron
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836857616387, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: IDNUM
-      value: 1100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182905836857616406, guid: bce36174c56a85841847d898e0552a23, type: 3}
-      propertyPath: CellsDetails.Array.data[0]
-      value: Vitamin C, also known as ascorbic acid, is a water-soluble vitamin and
-        antioxidant that may neutralize unstable chemicals and assist our bodies
-        avoid or reverse cellular damage. It also participates in a number of metabolic
-        processes connected to immunological health. Vitamin C is an important vitamin.
-        It helps your immune system defend itself by supporting several cellular
-        operations of your body's adaptive immune systems. Because it is an antioxidant,
-        it can also combat free radicals in the body, reducing inflammation and increasing
-        immunity. It can maintain your skin healthy and act as a barrier to hazardous
-        chemicals entering your body.
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bce36174c56a85841847d898e0552a23, type: 3}

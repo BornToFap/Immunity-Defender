@@ -39,6 +39,12 @@ public class GameManagerSystem : MonoBehaviour
    public PlayerSystem playeron;
 
     public int playerHealthLeft;
+
+
+    [SerializeField] GameObject ency, menu;
+
+    [SerializeField] private AudioClip[] sound;
+    AudioSource sourcesound;
     private void Awake()
     {
         if(instances != null && instances != this)
@@ -48,72 +54,82 @@ public class GameManagerSystem : MonoBehaviour
         }
         instances = this;
         DontDestroyOnLoad(this.gameObject);
+
+       
     }
 
     private void Start()
     {
-        
+        sourcesound = GetComponent<AudioSource>();
     }
     public string scenename;
 
     private void Update()
     {
-        
-       
-
+        if (SceneManager.GetActiveScene().buildIndex >= 2)
+        {
+            ency.SetActive(true);
+            menu.SetActive(true);
+        }
+        else
+        {
+            ency.SetActive(false);
+            menu.SetActive(false);
+        }
 
         if (bookanim.activeInHierarchy)
-        {
-            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
             {
-                MenuHandler.SetActive(false);
-                Encyclopedia.SetActive(true);
-                bookanim.SetActive(false);
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
+                {
+                    MenuHandler.SetActive(false);
+                    Encyclopedia.SetActive(true);
+                    bookanim.SetActive(false);
+
+                }
+            }
+
+            if (CloseGame.activeInHierarchy)
+            {
+                if (closeAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !closeAnim.IsInTransition(0))
+                {
+                    CloseGame.SetActive(false);
+                }
+            }
+
+
+            if (ObjectFlip.activeInHierarchy)
+            {
+                ButtonMenu.SetActive(false);
+                Flipanim.SetBool("FlipOpen", FlipABook);
+
+                if (Flipanim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !Flipanim.IsInTransition(0))
+                {
+                    FlipABook = false;
+                    BckBtn.SetActive(true);
+                    ObjectFlip.SetActive(false);
+                    Encyclopedia.SetActive(true);
+
+
+                }
+            }
+
+            if (SceneManager.GetActiveScene().buildIndex >= 3)
+            {
+                EnemyNumber.gameObject.SetActive(true);
+                if (FindObjectOfType<PlayerSystem>() != null)
+                {
+                    playerHealthLeft = FindObjectOfType<PlayerSystem>().playerHeath;
+                }
+                RestartingOnDeath(playerHealthLeft);
+
 
             }
-        }
-
-        if (CloseGame.activeInHierarchy)
-        {
-            if (closeAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !closeAnim.IsInTransition(0))
+            else
             {
-                CloseGame.SetActive(false);
+                EnemyNumber.gameObject.SetActive(false);
             }
-        }
+
         
-
-        if (ObjectFlip.activeInHierarchy)
-        {
-            ButtonMenu.SetActive(false);
-            Flipanim.SetBool("FlipOpen", FlipABook);
-
-            if (Flipanim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !Flipanim.IsInTransition(0))
-            {
-                FlipABook = false;
-                BckBtn.SetActive(true);
-                ObjectFlip.SetActive(false);
-                Encyclopedia.SetActive(true);
-               
-
-            }
-        }
-
-        if (SceneManager.GetActiveScene().buildIndex >= 3)
-        {
-            EnemyNumber.gameObject.SetActive(true);
-            if (FindObjectOfType<PlayerSystem>() != null)
-            {
-                playerHealthLeft = FindObjectOfType<PlayerSystem>().playerHeath;
-            }
-            RestartingOnDeath(playerHealthLeft);
-
-
-        } else
-        {
-            EnemyNumber.gameObject.SetActive(false);
-        }
-
-     
 
 
     }
@@ -150,7 +166,7 @@ public class GameManagerSystem : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        this.gameObject.SetActive(false);
+      
         MenuHandler.SetActive(false);
     }
 
@@ -168,18 +184,27 @@ public class GameManagerSystem : MonoBehaviour
     public void DisplayEncylopeia()
     {
         bookanim.SetActive(true);
-        anim.SetBool("OpenBook", true);        
-        
+        anim.SetBool("OpenBook", true);
+        VirusButtons.SetActive(true);
+       CellsButtons.SetActive(false);
+        ImmuneBoosterButton.SetActive(false);
+
     }
 
 
     public void CloseEncylopedia()
     {
-        CloseGame.SetActive(true);
-        closeAnim.SetBool("CloseBook", true);
+        if (ButtonMenu.activeInHierarchy)
+        {
+            CloseGame.SetActive(true);
+            closeAnim.SetBool("CloseBook", true);
             Encyclopedia.SetActive(false);
-        //CloseGame.SetActive(false);
-        
+            //CloseGame.SetActive(false);
+        }
+        else
+        {
+            CloseGame.SetActive(false);
+        }
     }
 
     public void BackButton()
@@ -228,10 +253,13 @@ public class GameManagerSystem : MonoBehaviour
            EnemyNumber.text = "Viruses Left: " + enemyholder.Length.ToString();
             if (enemyholder.Length <= 0)
             {
-                FindObjectOfType<LevelManager>().Play("LevelClearAudio");
+                
                 lvlclear.SetActive(true);
-              //  Time.timeScale = 0.5f;
-             //   Time.fixedDeltaTime = 0.02f * Time.timeScale;
+                sourcesound.PlayOneShot(sound[0], 1f);
+               // FindObjectOfType<LevelManager>().Play("LevelClearAudio");
+               
+                //  Time.timeScale = 0.5f;
+                //   Time.fixedDeltaTime = 0.02f * Time.timeScale;
                 // SceneManager.LoadScene("MapScene");
                 StarsSetter();
                 StartCoroutine(MapLoad());
@@ -317,13 +345,16 @@ public class GameManagerSystem : MonoBehaviour
 
         if (Health <= 0)
         {
+            
             GameOverText.SetActive(true);
-            FindObjectOfType<LevelManager>().Play("LevelLoose");
+            //   FindObjectOfType<LevelManager>().Play("LevelLoose");
+                       
 
 
             if (Input.GetKeyDown(KeyCode.R))
                 {
-                    GameOverText.SetActive(false);
+                sourcesound.Play();
+                GameOverText.SetActive(false);
                     FindObjectOfType<LevelManager>().LoadScene(SceneManager.GetActiveScene().name);
 
                 }

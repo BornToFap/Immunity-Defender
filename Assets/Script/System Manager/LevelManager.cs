@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private AudioAssets[] audios;
 
 
-    [SerializeField] private GameObject holder;
+ 
     private void Awake()
     {
        
@@ -61,6 +61,7 @@ public class LevelManager : MonoBehaviour
     private void FixedUpdate()
     {
 
+
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
 
@@ -78,22 +79,10 @@ public class LevelManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Goto", 1);
         }
-        if (holder == null) { return; }
-        else
-        {
-            if (SceneManager.GetActiveScene().buildIndex >= 2)
-            {
-                holder = GameObject.Find("Game_Manager");
-                holder.SetActive(true);
+      
 
-            }
-            else
-            {
-
-                holder.SetActive(false);
-
-            }
-        }
+            
+        
 
 
     }
