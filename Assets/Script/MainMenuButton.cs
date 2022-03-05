@@ -6,10 +6,18 @@ using UnityEngine.SceneManagement;
 public class MainMenuButton : MonoBehaviour
 {
     // Start is called before the first frame update
+
+   
     public void StartGame()
     {
-
-        SceneManager.LoadScene("IntroCenimatic");
+        if (PlayerPrefs.GetInt("Goto", 0) == 0)
+        {
+            SceneManager.LoadScene("IntroCenimatic");
+        }
+        else
+        {
+            FindObjectOfType<LevelManager>().LoadScene("MapScene");
+        }
     }
     public void ExitGame()
     {

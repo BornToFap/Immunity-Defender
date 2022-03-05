@@ -270,7 +270,7 @@ public class PlayerSystem : MonoBehaviour
         {
             FindObjectOfType<LevelManager>().Play("PowerUpAudio");
             Destroy(collision.gameObject);
-            NumHeart++;
+            NumHeart ++;
         }
         else if (collision.gameObject.tag == "VitaminD")
         {

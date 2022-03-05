@@ -60,14 +60,6 @@ public class GameManagerSystem : MonoBehaviour
     {
         
        
-        if(SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            this.gameObject.SetActive(false);
-        }
-        else
-        {
-            this.gameObject.SetActive(true);
-        }
 
 
         if (bookanim.activeInHierarchy)

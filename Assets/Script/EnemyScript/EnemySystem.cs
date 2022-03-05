@@ -13,7 +13,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField] protected LayerMask platform_mask;
     [SerializeField] protected BoxCollider2D detectcollider;
     [SerializeField] protected Transform groundcheckpos;
-    [SerializeField] protected GameObject enemyparticle;
+    [SerializeField] protected ParticleSystem enemyparticle;
      protected Rigidbody2D EnemyRigid;
     [SerializeField] protected int  Vidnum, Vstatus = 0;
    [SerializeField] Vector2 startingpos;
@@ -31,6 +31,7 @@ public class EnemySystem : MonoBehaviour
         EnemyRigid = GetComponentInChildren<Rigidbody2D>();
         enemycollider = GetComponentInChildren<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
        
         if (PlayerPrefs.GetInt("VID" + Vidnum, Vstatus) == 0)
         {
@@ -110,6 +111,8 @@ public class EnemySystem : MonoBehaviour
     {
         if(Enemyhealth <= 0)
         {
+          //  enemyparticle.enableEmission = true;
+          //  enemyparticle.Play();
             Vstatus = 1;
             if (PlayerPrefs.GetInt("VID" + Vidnum, Vstatus) <= 0)
             {
@@ -118,19 +121,32 @@ public class EnemySystem : MonoBehaviour
             Debug.Log("VirusStatus:" + PlayerPrefs.GetInt("VID" + Vidnum, Vstatus));
             
            FindObjectOfType<LevelManager>().Play("EnemyDeath");
-            enemyparticle.SetActive(true);
 
-            
-            Destroy(this.gameObject);
-           
-           
+
+
+           // if(enemyparticle.isEmitting == false)
+          //  {
+                Destroy(this.gameObject);
+          //  }
+          
+
         }
         
     }
+
+   
     protected virtual void Pattroling()
     {
-
-        EnemyRigid.velocity = new Vector2(MovementSpeed * Time.deltaTime, EnemyRigid.velocity.y);
+        if (transform.localScale.x > 0f)
+        {
+            EnemyRigid.velocity = new Vector2((MovementSpeed * -1) * Time.deltaTime, EnemyRigid.velocity.y);
+           
+          
+        }
+        else
+        {
+            EnemyRigid.velocity = new Vector2(MovementSpeed * Time.deltaTime, EnemyRigid.velocity.y);
+        }
         isChasing = false; 
         if (!GroundCheck() || detectcollider.IsTouchingLayers(platform_mask))
         {
@@ -143,7 +159,20 @@ public class EnemySystem : MonoBehaviour
         if(isChasing == false)
         {
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-            MovementSpeed *= -1;
+          /*  if (transform.localScale.x > 0f)
+            {
+              
+                MovementSpeed *= -1;
+
+
+            }
+            else
+            {
+                
+                MovementSpeed *= 1;
+            }
+          */
+          
         }
     }
 

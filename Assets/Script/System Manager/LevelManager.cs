@@ -21,6 +21,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject MainMenuCanvs;
 
     [SerializeField] private AudioAssets[] audios;
+
+
+    [SerializeField] private GameObject holder;
     private void Awake()
     {
        
@@ -69,7 +72,30 @@ public class LevelManager : MonoBehaviour
             AudioAssets s = Array.Find(audios, sounds => sounds.audioName == "MainMenu");
             s.source.Stop();
         }
-        
+
+
+        if(SceneManager.GetActiveScene().name == "IntroCenimatic")
+        {
+            PlayerPrefs.SetInt("Goto", 1);
+        }
+        if (holder == null) { return; }
+        else
+        {
+            if (SceneManager.GetActiveScene().buildIndex >= 2)
+            {
+                holder = GameObject.Find("Game_Manager");
+                holder.SetActive(true);
+
+            }
+            else
+            {
+
+                holder.SetActive(false);
+
+            }
+        }
+
+
     }
 
     public async void LoadScene(string sceneName)
