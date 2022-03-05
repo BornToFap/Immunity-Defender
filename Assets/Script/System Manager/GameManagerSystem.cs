@@ -36,7 +36,7 @@ public class GameManagerSystem : MonoBehaviour
 
     [SerializeField] private GameObject GameOverText;
 
-   public PlayerSystem playeron;
+   public GameObject playeron;
 
     public int playerHealthLeft;
 
@@ -119,6 +119,7 @@ public class GameManagerSystem : MonoBehaviour
                 if (FindObjectOfType<PlayerSystem>() != null)
                 {
                     playerHealthLeft = FindObjectOfType<PlayerSystem>().playerHeath;
+                playeron = GameObject.FindGameObjectWithTag("Player");
                 }
                 RestartingOnDeath(playerHealthLeft);
 
@@ -255,7 +256,7 @@ public class GameManagerSystem : MonoBehaviour
             {
                 
                 lvlclear.SetActive(true);
-                sourcesound.PlayOneShot(sound[0], 1f);
+              //  sourcesound.PlayOneShot(sound[0], 1f);
                // FindObjectOfType<LevelManager>().Play("LevelClearAudio");
                
                 //  Time.timeScale = 0.5f;
@@ -280,7 +281,15 @@ public class GameManagerSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
        // Time.timeScale = 1f;
         lvlclear.SetActive(false);
-        SceneManager.LoadScene("MapScene");
+        if(SceneManager.GetActiveScene().buildIndex == 7)
+        {
+            FindObjectOfType<LevelManager>().LoadScene("Ending");
+        }
+        else
+        {
+            SceneManager.LoadScene("MapScene");
+        }
+        
        
     }
 
@@ -343,38 +352,38 @@ public class GameManagerSystem : MonoBehaviour
     public void RestartingOnDeath(int Health)
     {
 
-        if (Health <= 0)
+        if (Health <= 0 || playeron == null)
         {
-            
+
             GameOverText.SetActive(true);
-            //   FindObjectOfType<LevelManager>().Play("LevelLoose");
-                       
+            //  FindObjectOfType<LevelManager>().Play("LevelLoose");
+              if (Input.GetKeyDown(KeyCode.R))
+              {
+            //sourcesound.Play();
+            GameOverText.SetActive(false);
+            FindObjectOfType<LevelManager>().LoadScene(SceneManager.GetActiveScene().name);
 
+                 }
+              else if (Input.GetKeyDown(KeyCode.M))
+              {
+                  GameOverText.SetActive(false);
+                  currentStars = 0;
+                  PlayerPrefs.SetInt("Lv" + levelindex, currentStars);
+                  FindObjectOfType<LevelManager>().LoadScene("MapScene");
+              }
 
-            if (Input.GetKeyDown(KeyCode.R))
-                {
-                sourcesound.Play();
-                GameOverText.SetActive(false);
-                    FindObjectOfType<LevelManager>().LoadScene(SceneManager.GetActiveScene().name);
-
-                }
-                else if (Input.GetKeyDown(KeyCode.M))
-                {
-                    GameOverText.SetActive(false);
-                    currentStars = 0;
-                    PlayerPrefs.SetInt("Lv" + levelindex, currentStars);
-                    FindObjectOfType<LevelManager>().LoadScene("MapScene");
-                }
-
-            }
+        }
         else
         {
             GameOverText.SetActive(false);
         }
-    }
 
+           
+  
+        }
+    
 
-     
+ 
         
   
 }

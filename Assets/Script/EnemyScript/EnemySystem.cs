@@ -65,7 +65,7 @@ public class EnemySystem : MonoBehaviour
         }
         else if (Vector2.Distance(transform.position, player.transform.position) < attackDistance && RaycastDetectPLayer() && IsAttackmode == true)
         {
-           FindObjectOfType<LevelManager>().Play("EnemyAttack");
+          // FindObjectOfType<LevelManager>().Play("EnemyAttack");
             Attack();
        
         }

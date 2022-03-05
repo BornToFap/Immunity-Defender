@@ -109,7 +109,7 @@ public class PlayerSystem : MonoBehaviour
     {
         if (DetectGround() && Input.GetButtonDown("Jump"))
         {
-            FindObjectOfType<LevelManager>().Play("PlayerJump");
+          //  FindObjectOfType<LevelManager>().Play("PlayerJump");
             myrigid.AddForce(new Vector2(0f, JumpForce));
         }
 

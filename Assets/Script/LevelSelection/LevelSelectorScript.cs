@@ -14,6 +14,7 @@ public class LevelSelectorScript : MonoBehaviour
    
     private void Update()
     {
+       
         
         UpdateLevelImage();
        UpdateLevelSelector();
